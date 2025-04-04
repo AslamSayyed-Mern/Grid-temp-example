@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* background-color: rgb(34, 34, 34); */
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(3,minmax(10px,1fr));
+            grid-template-rows: repeat(2,minmax(10px,1fr));
+            justify-content: center;
+            align-content: center;
+            background-color: blanchedalmond;
+            grid-template-areas: 'section1 section2 header'
+                                 'section1 section2 aside'
+                                 'section1 section2 aside'
+                                 'footer footer footer';
+        }
+        .header{
+            padding: 20px;
+            text-align: left;
+            align-content: center;
+            grid-area: header;
+            color: #fff;
+            background-color: rgb(40, 34, 34);
+
+        }
+        .header #para2{
+            font-size: 12px;
+            color: #ccc;
+        }
+        .aside{
+            text-align: start;
+            padding: 20px;
+            align-content: center;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: x-large;
+            grid-area: aside;
+            background-color: rgb(255, 218, 53);
+        }
+
+        .section1{
+            grid-area: section1;
+           
+        }
+        .section2{
+            grid-area: section2;
+          
+        }
+        .footer{
+            padding: 20px;
+            text-align: center;
+            color: white;
+            grid-area: footer;
+            background-color: rgb(40, 34, 34);
+        }
+        .section1 img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+        }
+        .section2 img{
+            width: 100%;
+            height: 100%;
+            filter: sepia();
+            object-fit:cover;
+        }
+        span{
+            color: rgb(255, 218, 53);
+        }
+    </style>
+</head>
+<body onload="alert('open in laptop for best viewing experience')">
+    <div class="container">
+        <div class="header"><p>                      Aspiring Full Stack Developer with a strong foundation in front-end technologies like HTML, CSS, and basic JavaScript, along with Python for backend logic. Passionate about building responsive and user-friendly web applications. </p>
+        <p id="para2">Currently expanding my skills in React.js and backend development to grow into a well-rounded Full Stack Developer. Eager to learn, adapt, and contribute to innovative projects while continuously improving my technical expertise</p></div>
+        <div class="aside">Design is a way of life</div>
+        <div class="section1"><img src="./Aslam_ghibli.PNG" alt="kgf2"></div>
+        <div class="section2"><img src="./anime_background.jpg" alt="kgf2"></div>
+        <div class="footer">Website template created by <span>aslam sayyed</span></div>
+    </div>
+    
+</body>
+</html>
